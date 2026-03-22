@@ -1,6 +1,6 @@
 # Project Overview
 
-This file contains basic information about the project practices, including folder structure, commit patterns and a github issue-oriented roadmap
+This file contains informations about the project practices, including folder structure, commit patterns, github issue-oriented roadmap and infos
 
 # Repository Structure
 
@@ -59,7 +59,47 @@ The project follows a structured workflow using:
 | chore    | Other changes that don't modify src or test files                     | chore: update .gitignore                    |
 | revert   | Revert a previous commit                                              | revert: revert "feat: add payment gateway"  |
 
+# Project management
+
+the project will be managed in a Github repository/project, using kanban boards along with milestones and issues to track the work schedule
+
+------------------------------------------------------------------------
+
+# Issue Writing Standard
+
+Each issue should follow a structured format.
+
+### Example Issue
+
+**Title**
+
+    Implement Payment Processing Service
+
+**Description**
+
+    Context:
+    We need a service responsible for handling payment creation and status updates.
+
+    Requirements:
+    - Validate wallet balance
+    - Support idempotency keys
+    - Persist payment with pending status
+    - Publish event to message queue
+
+    Acceptance Criteria:
+    - Payment is created successfully
+    - Duplicate idempotency key returns existing payment
+    - Unit tests cover main flows
+
+------------------------------------------------------------------------
+
 # Milestones
+
+## Milestone Example:
+
+description:
+Implement the core payment engine, according to {requirements} 
+to achieve {goal}
 
 ## Milestone 1 --- Core Payment Engine
 
@@ -132,3 +172,33 @@ Issues:
 - Write system design document
 - Create architecture diagrams
 - Finalize README documentation
+
+# Engineering Practices Demonstrated
+
+This project demonstrates:
+
+-   Clean Architecture
+-   Domain-driven design principles
+-   Event-driven processing
+-   Idempotent financial operations
+-   Transactional data integrity
+-   API security practices
+-   Containerized deployment
+-   Continuous Integration pipelines
+-   Architecture documentation
+
+# Future Improvements
+
+Potential improvements include:
+
+-   Distributed tracing
+-   Kubernetes deployment
+-   Advanced rate limiting
+-   Multi-region deployment
+-   Fraud detection simulation
+-   Event sourcing architecture
+
+# Author
+
+Levir Melo Software Engineer focused on distributed backend systems,
+fintech platforms, and cloud-native architectures.

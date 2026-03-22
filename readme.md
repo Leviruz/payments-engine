@@ -48,7 +48,7 @@ Architecture decisions (ADR):
 | docker           | Container setup                      |
 
 Full project structure and workflow:  
-`./docs/project-guide.md`
+[Project Guide:](./docs/project-guide.md)
 
 ---
 
