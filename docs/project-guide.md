@@ -179,6 +179,214 @@ Issues:
 - Create architecture diagrams
 - Finalize README documentation
 
+---
+
+# Git Workflow (Release-based workflow)
+
+This project follows a **Release-based branching model** to ensure organized development, controlled releases, and clear traceability between code and issues.
+
+---
+
+## Branch Types
+
+| Branch Type    | Purpose                                    |
+| -------------- | ------------------------------------------ |
+| main           | Production-ready code                      |
+| feature/\*     | New features under development             |
+| bug/\*         | Non-critical bug fixes                     |
+| hotfix/\*      | Critical fixes applied to production       |
+| release/\*     | Preparation for a new production release   |
+| improvement/\* | Enhancements to existing features          |
+
+---
+
+## Branching Strategy
+
+### Main Branch
+
+- **main**
+  - Always stable and production-ready
+  - Tagged with release versions
+
+---
+
+### Supporting Branches
+
+#### Feature Branch
+
+Used for developing new features.
+
+**Naming:**
+
+```
+feature/<issue-id>-<short-description>
+```
+
+**Flow:**
+
+```
+main → feature → release
+```
+
+---
+
+#### Bug Branch
+
+Used for fixing non-production bugs.
+
+**Naming:**
+
+```
+bug/<issue-id>-<short-description>
+```
+
+**Flow:**
+
+```
+main → bug → release
+```
+
+---
+
+#### Improvement Branch
+
+Used for enhancements to existing features.
+
+**Naming:**
+
+```
+improvement/<issue-id>-<short-description>
+```
+
+**Flow:**
+
+```
+main → improvement → release
+```
+
+---
+
+#### Release Branch
+
+Used to prepare a new release.
+
+**Naming:**
+
+```
+release/<version>
+```
+
+**Flow:**
+
+```
+main → feature → release → main
+```
+
+---
+
+#### Hotfix Branch
+
+Used for critical production fixes.
+
+**Naming:**
+
+```
+hotfix/<version>-<short-description>
+```
+
+**Flow:**
+
+```
+main → hotfix → main
+```
+
+---
+
+## Workflow Summary
+
+```
+feature/*      → release
+bug/*          → release
+improvement/*  → release
+release/*      → main
+hotfix/*       → main 
+```
+
+---
+
+## Versioning Strategy
+
+This project follows **Semantic Versioning (SemVer)**:
+
+```
+MAJOR.MINOR.PATCH
+```
+
+| Type  | Meaning          |
+| ----- | ---------------- |
+| MAJOR | Breaking changes |
+| MINOR | New features     |
+| PATCH | Bug fixes        |
+
+---
+
+## Commit + Branch + Issue Integration
+
+### Rules
+
+- Branch name must include **issue ID**
+- PR must reference the issue:
+
+```
+Closes #123
+```
+
+---
+
+## Pull Request Rules
+
+- Linked to an issue
+- Pass CI checks
+- Reviewed before merging
+- Clear description
+
+---
+
+## Release Process
+
+1. Create release branch from main
+2. Merge feature, bug and improvement branches into release
+3. Merge release into main using Tag versioning
+
+```
+v1.0.0
+```
+
+## Hotfix Process
+
+1. Create hotfix branch from `main`
+2. Apply fix
+3. Merge int main
+4. Tag new patch version
+
+---
+
+## Mermaid Diagram
+
+[Mermaid](./diagrams/1-release-based-workflow.md)
+
+---
+
+## Best Practices
+
+- Keep branches small and focused
+- Prefer short-lived branches
+- Always link code to issues
+- Avoid direct commits to main
+- Use Pull Requests for all merges
+
+---
+
 # Engineering Practices Demonstrated
 
 This project demonstrates:
