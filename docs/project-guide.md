@@ -63,7 +63,7 @@ The project follows a structured workflow using:
 
 the project will be managed in a Github repository/project, using kanban boards along with milestones and issues to track the work schedule
 
-------------------------------------------------------------------------
+---
 
 # Issue Writing Standard
 
@@ -91,15 +91,21 @@ Each issue should follow a structured format.
     - Duplicate idempotency key returns existing payment
     - Unit tests cover main flows
 
-------------------------------------------------------------------------
+---
 
 # Milestones
 
 ## Milestone Example:
 
 description:
-Implement the core payment engine, according to {requirements} 
+Implement the core payment engine, according to {requirements}
 to achieve {goal}
+
+Issues:
+
+- issue 01
+- issue 02
+- issue 03
 
 ## Milestone 1 --- Core Payment Engine
 
@@ -177,26 +183,26 @@ Issues:
 
 This project demonstrates:
 
--   Clean Architecture
--   Domain-driven design principles
--   Event-driven processing
--   Idempotent financial operations
--   Transactional data integrity
--   API security practices
--   Containerized deployment
--   Continuous Integration pipelines
--   Architecture documentation
+- Clean Architecture
+- Domain-driven design principles
+- Event-driven processing
+- Idempotent financial operations
+- Transactional data integrity
+- API security practices
+- Containerized deployment
+- Continuous Integration pipelines
+- Architecture documentation
 
 # Future Improvements
 
 Potential improvements include:
 
--   Distributed tracing
--   Kubernetes deployment
--   Advanced rate limiting
--   Multi-region deployment
--   Fraud detection simulation
--   Event sourcing architecture
+- Distributed tracing
+- Kubernetes deployment
+- Advanced rate limiting
+- Multi-region deployment
+- Fraud detection simulation
+- Event sourcing architecture
 
 # Author
 

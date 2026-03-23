@@ -36,16 +36,16 @@ Architecture decisions (ADR):
 
 ## Repository Structure
 
-| Directory          | Purpose                                 |
-|------------------|---------------------------------------|
-| docs/diagrams    | Architecture diagrams                 |
-| docs/adr         | Architecture Decision Records         |
-| src/domain       | Core business logic                   |
-| src/application  | Use cases                            |
-| src/infrastructure | External systems & persistence      |
-| src/interfaces   | API layer                            |
-| tests            | Unit & integration tests             |
-| docker           | Container setup                      |
+| Directory          | Purpose                        |
+| ------------------ | ------------------------------ |
+| docs/diagrams      | Architecture diagrams          |
+| docs/adr           | Architecture Decision Records  |
+| src/domain         | Core business logic            |
+| src/application    | Use cases                      |
+| src/infrastructure | External systems & persistence |
+| src/interfaces     | API layer                      |
+| tests              | Unit & integration tests       |
+| docker             | Container setup                |
 
 Full project structure and workflow:  
 [Project Guide:](./docs/project-guide.md)
@@ -65,9 +65,9 @@ npm test
 ```
 
 ## Engineering Practices
+
 - Clean Architeture
 - Domain-Driven Design
 - Event-driven processing
 - Idempotent operations
 - CI/CD pipelines
-
